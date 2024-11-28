@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be Movies</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- H E A D E R -->
+    <header>
+      <div class="container">
+        <div class="logo"><span>BE</span>MOVIES</div>
+        <div class="navbar">
+          <ul>
+            <li>search</li>
+            <li>latest</li>
+            <li>genres</li>
+            <li class="login-btn">register</li>
+            <li class="login-btn">sign in</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- M A I N -->
+    <main class="main">
+      <div class="container">
+        <!-- L O G I N   M O D A L -->
+        <div class="login-modal">
+          <div class="login-modal-content">
+            <span class="close">&times;</span>
+            <div class="login-options">
+              <div class="signupOpt">signup</div>
+              <div class="loginOpt">login</div>
+            </div>
+            <input type="text" class="username" placeholder="Username" />
+            <input type="password" class="password" placeholder="Password" />
+            <div class="checkbox">
+              <input type="checkbox" class="remember" />
+              <label for="remember">Remember me</label>
+            </div>
+            <input class="button" type="button" value="LOGIN" />
+            <a href="">I forgot my password</a>
+            <p>Not a member yet ? <a href="">Sign up</a></p>
+          </div>
+        </div>
+        <!-- M O V I E   M O D A L -->
+        <div class="movie-modal">
+          <div class="movie-modal-content">
+            <span class="close-movie">&times;</span>
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/18d4/e152/3a9723ae5397841adf7fbaed84bd30b2?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dKyia7aDKEZ4LQmjiNuHgD7ndxEj7mFfLhfzXkze5Xt9oL6VXm4v0-NtQgkdPV~WMJ2eJq4y8ilRj8Dcjj7E0FwsaZMRos4i1vei-YhVrXOmII7Sp4w2VGMtXe1d1oPREHPCJn~9xL2ltlbxhGW2FUc-AC3jOBs9G5CfuJh8QNJ8Tlqg8fRHxF1uVFUCkGjPfrfXl5tW48lRFM83rmOzDjgrNQ27YvpjzAFASHhdXoUeG8HEIZpVbRfmWAs57Z-qdyQEH35ZKODWCuvK9-t3xvOBC~DrtQ5pwMdiNsNjWU5AAndrVOMfE0C4S~nnhjaEyrJBog62N8Mj9AB-2nPKLw__"
+                  alt=""
+                />
+              </div>
+              <div class="card-text">
+                <h1 class="card-title">the godfather</h1>
+                <h2 class="card-year">1972</h2>
+                <h1 class="star-rating">
+                  <img src="star-rating.png" alt="" /> 8.7
+                </h1>
+                <h2 class="card-genre">crime / drama</h2>
+                <p class="card-description">
+                  Spanning the years 1945 to 1955, a chronicle of the fictional
+                  Italian-American Corleone crime family. When organized crime
+                  family patriarch, Vito Corleone barely survives an attempt on
+                  his life, his youngest son, Michael steps in to take care of
+                  the would-be killers, launching a campaign of bloody revenge.
+                </p>
+                <div class="cast-container">
+                  <h2 class="card-cast">cast:</h2>
+                  <p class="cast">
+                    Marlon Brando, Al Pacino, James Caan, Robert Duvall
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- S E A R C H    I N P U T -->
+        <div class="search-container">
+          <input
+            id="search-field"
+            type="text"
+            placeholder="Search for a movie..."
+          />
+          <img
+            id="search-button"
+            class="arrow"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZhJREFUSEuVVduBwyAMk5gk3aTd5Da5btLb5FZhkujKIwkGnPT4aCgBbMmyQkwHAch/k1+3ewhCdqmeTrv24V+7bbkInLfVYGMA77A9UO/IAP0TB0CDoMXiQR4QD3RZZl2K5tnV1fZxwStPYTY8bjWV9ITwwxBiK4Tjnq4Gpwl08KX1CfAbQATwCGSca80Kx69WpwppXQD+vhEsoCLAB8n0HGXd0DhvBacLShD8AkjPjKQE6cYYwGuWsaJatYB+kJbZoiIPoY8ckgwS1ZoMQCZdn8Wht1y2zWlSMjlm+7+8lH8ihAeDpctttFVrVma6VKn927vr3IZDZOBtN6RZDQ5d++a1oyoUvQDcU7FJ3jyqaw18z+nrVPl/CbhTNXNHi6WTrfN2C/bkKi1sM29puXLTbHCtPXRZbZlDuIOIgbyV5M6c+B9tJulLwIuVc0+BveOO/qpJPSr85EcMTIb30XDs+txbxrutjY8IKtb2I+N9D446+Zc6AT5CPEr9xE42F5p4kdXtkLWntEHum8VM0PaOaOR7wU4b5w+HOOQaH0nZXAAAAABJRU5ErkJggg=="
+          />
+        </div>
+        <!-- F I R S T   S L I D E R -->
+        <div class="swiper search-swiper">
+          <h2>Results for search</h2>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- S L I D E S -->
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/18d4/e152/3a9723ae5397841adf7fbaed84bd30b2?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dKyia7aDKEZ4LQmjiNuHgD7ndxEj7mFfLhfzXkze5Xt9oL6VXm4v0-NtQgkdPV~WMJ2eJq4y8ilRj8Dcjj7E0FwsaZMRos4i1vei-YhVrXOmII7Sp4w2VGMtXe1d1oPREHPCJn~9xL2ltlbxhGW2FUc-AC3jOBs9G5CfuJh8QNJ8Tlqg8fRHxF1uVFUCkGjPfrfXl5tW48lRFM83rmOzDjgrNQ27YvpjzAFASHhdXoUeG8HEIZpVbRfmWAs57Z-qdyQEH35ZKODWCuvK9-t3xvOBC~DrtQ5pwMdiNsNjWU5AAndrVOMfE0C4S~nnhjaEyrJBog62N8Mj9AB-2nPKLw__"
+                alt=""
+              />
+              <div class="movie-info">
+                <div class="movie-title">The Godfather part I</div>
+                <div class="movie-year">1972</div>
+                <div class="movie-genre">Crime / Drama / Thriller</div>
+                <img class="movie-star" src="star-rating.png" alt="" />
+                <div class="movie-rating">7.4</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/7386/a758/10db88bea03473655dc859b1f8724fe2?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oZ0RXdMXerLGLU-eKMrRoyOMoLrV4bRgdxuWOpNbL2iwM-Xy50KSDnldBybwt8x4B8HAHCi0dwzJPRSytwqtlgeJ8hag8niUW5~GIdB4pxZpCxBQoQFTqqHjdjHtwbqZ3IRMsMuW4wFOTQ2AdCq~Q7a9a~AgepMBK9reY9G0rAnhR0U4RemgRbK9BWmGNkwYqznchJvJNKBgShYEq9PN~GlZJOM8lSSPtIrEQRAy2T7KdbiQtVzbIg4LbH3TvYi~RWBkfD0kyD-ivJun7JxHz4MKqtg-BvPWIq5Uibv8GQpP~lToxAgxqI~TU3HS08hy3ZWRdM4jgw64soPj3Ji8oQ__"
+                alt=""
+              />
+              <div class="movie-info">
+                <div class="movie-title">The Godfather part II</div>
+                <div class="movie-year">1973</div>
+                <div class="movie-genre">Crime / Drama / Thriller</div>
+                <img class="movie-star" src="star-rating.png" alt="" />
+                <div class="movie-rating">7.4</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/18d4/e152/3a9723ae5397841adf7fbaed84bd30b2?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dKyia7aDKEZ4LQmjiNuHgD7ndxEj7mFfLhfzXkze5Xt9oL6VXm4v0-NtQgkdPV~WMJ2eJq4y8ilRj8Dcjj7E0FwsaZMRos4i1vei-YhVrXOmII7Sp4w2VGMtXe1d1oPREHPCJn~9xL2ltlbxhGW2FUc-AC3jOBs9G5CfuJh8QNJ8Tlqg8fRHxF1uVFUCkGjPfrfXl5tW48lRFM83rmOzDjgrNQ27YvpjzAFASHhdXoUeG8HEIZpVbRfmWAs57Z-qdyQEH35ZKODWCuvK9-t3xvOBC~DrtQ5pwMdiNsNjWU5AAndrVOMfE0C4S~nnhjaEyrJBog62N8Mj9AB-2nPKLw__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/7386/a758/10db88bea03473655dc859b1f8724fe2?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oZ0RXdMXerLGLU-eKMrRoyOMoLrV4bRgdxuWOpNbL2iwM-Xy50KSDnldBybwt8x4B8HAHCi0dwzJPRSytwqtlgeJ8hag8niUW5~GIdB4pxZpCxBQoQFTqqHjdjHtwbqZ3IRMsMuW4wFOTQ2AdCq~Q7a9a~AgepMBK9reY9G0rAnhR0U4RemgRbK9BWmGNkwYqznchJvJNKBgShYEq9PN~GlZJOM8lSSPtIrEQRAy2T7KdbiQtVzbIg4LbH3TvYi~RWBkfD0kyD-ivJun7JxHz4MKqtg-BvPWIq5Uibv8GQpP~lToxAgxqI~TU3HS08hy3ZWRdM4jgw64soPj3Ji8oQ__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/18d4/e152/3a9723ae5397841adf7fbaed84bd30b2?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dKyia7aDKEZ4LQmjiNuHgD7ndxEj7mFfLhfzXkze5Xt9oL6VXm4v0-NtQgkdPV~WMJ2eJq4y8ilRj8Dcjj7E0FwsaZMRos4i1vei-YhVrXOmII7Sp4w2VGMtXe1d1oPREHPCJn~9xL2ltlbxhGW2FUc-AC3jOBs9G5CfuJh8QNJ8Tlqg8fRHxF1uVFUCkGjPfrfXl5tW48lRFM83rmOzDjgrNQ27YvpjzAFASHhdXoUeG8HEIZpVbRfmWAs57Z-qdyQEH35ZKODWCuvK9-t3xvOBC~DrtQ5pwMdiNsNjWU5AAndrVOMfE0C4S~nnhjaEyrJBog62N8Mj9AB-2nPKLw__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/7386/a758/10db88bea03473655dc859b1f8724fe2?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oZ0RXdMXerLGLU-eKMrRoyOMoLrV4bRgdxuWOpNbL2iwM-Xy50KSDnldBybwt8x4B8HAHCi0dwzJPRSytwqtlgeJ8hag8niUW5~GIdB4pxZpCxBQoQFTqqHjdjHtwbqZ3IRMsMuW4wFOTQ2AdCq~Q7a9a~AgepMBK9reY9G0rAnhR0U4RemgRbK9BWmGNkwYqznchJvJNKBgShYEq9PN~GlZJOM8lSSPtIrEQRAy2T7KdbiQtVzbIg4LbH3TvYi~RWBkfD0kyD-ivJun7JxHz4MKqtg-BvPWIq5Uibv8GQpP~lToxAgxqI~TU3HS08hy3ZWRdM4jgw64soPj3Ji8oQ__"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <!-- S E C O N D   S L I D E R -->
+
+        <div class="swiper latest-swiper">
+          <h2>Latest releases</h2>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/a2de/bd47/bde909e0d73fe8b379ec1f2849868d09?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cc-yVTo69yre6Fb4a0MVn86QI4x9f1976Fn~8vY5pJ8ARHLNYR0sit8BN325ju7hatItXKCTmbQoCFuqEym37DPxXBWFRdwAYX4fe67FnDsN-jbxhu2P~dJgJJVJukONVSPyX5PmWQB1h7OUseJ-6hedo6eI0N8c2LnRu0HCIKhpxM7BtZVH4SMjDW3zkxbSEuPdhgVq9p8igVpWAK7E4ueq2R5X6xraZFZVkkglkuBnb3aoKoFoxhiaSRt3zxZ7jkpFubCMz38HudX1jETy5pQpahNU3T037rop5H2PsVGORrH7KMhmAMgj0vNO3qDhy94wPOLVtD1ZHo9wAqLjcQ__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/4d83/e1af/8fb8dce5428603e901fef1e3fe672283?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SWL8xsNk0AXU~pYHDZAg5~EzgqGE~sm~zGMy-9c7FIaoD6Tq1NchmNqww7h8YMAFkntic8lAv~0Umc3Q2Al9YsWT5M9VML4cp3tG4vbUl8LliE5Pi9SUEe3HNzdmZsy2cTgonLQ0sLfqOvrlx5Web7V3aXbtfKku6wAByfG5Z4WHesA7wgywciNaNmNGC~i-EK0ZOgPtOVfedGfyvt~1GPaEIOw8FCAijDvrj1T0YZ8EBG7pogF~Ad9BU~thSA4-SW0Xs1RtVr2JfkleXHK9avt6AaF4m3BYp-6ae7b-uAl2s5MrM781TPowEJ8XAWQNbNgLGMLsEo7PR5xFcDj2hA__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/a2de/bd47/bde909e0d73fe8b379ec1f2849868d09?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cc-yVTo69yre6Fb4a0MVn86QI4x9f1976Fn~8vY5pJ8ARHLNYR0sit8BN325ju7hatItXKCTmbQoCFuqEym37DPxXBWFRdwAYX4fe67FnDsN-jbxhu2P~dJgJJVJukONVSPyX5PmWQB1h7OUseJ-6hedo6eI0N8c2LnRu0HCIKhpxM7BtZVH4SMjDW3zkxbSEuPdhgVq9p8igVpWAK7E4ueq2R5X6xraZFZVkkglkuBnb3aoKoFoxhiaSRt3zxZ7jkpFubCMz38HudX1jETy5pQpahNU3T037rop5H2PsVGORrH7KMhmAMgj0vNO3qDhy94wPOLVtD1ZHo9wAqLjcQ__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/4d83/e1af/8fb8dce5428603e901fef1e3fe672283?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SWL8xsNk0AXU~pYHDZAg5~EzgqGE~sm~zGMy-9c7FIaoD6Tq1NchmNqww7h8YMAFkntic8lAv~0Umc3Q2Al9YsWT5M9VML4cp3tG4vbUl8LliE5Pi9SUEe3HNzdmZsy2cTgonLQ0sLfqOvrlx5Web7V3aXbtfKku6wAByfG5Z4WHesA7wgywciNaNmNGC~i-EK0ZOgPtOVfedGfyvt~1GPaEIOw8FCAijDvrj1T0YZ8EBG7pogF~Ad9BU~thSA4-SW0Xs1RtVr2JfkleXHK9avt6AaF4m3BYp-6ae7b-uAl2s5MrM781TPowEJ8XAWQNbNgLGMLsEo7PR5xFcDj2hA__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/a2de/bd47/bde909e0d73fe8b379ec1f2849868d09?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cc-yVTo69yre6Fb4a0MVn86QI4x9f1976Fn~8vY5pJ8ARHLNYR0sit8BN325ju7hatItXKCTmbQoCFuqEym37DPxXBWFRdwAYX4fe67FnDsN-jbxhu2P~dJgJJVJukONVSPyX5PmWQB1h7OUseJ-6hedo6eI0N8c2LnRu0HCIKhpxM7BtZVH4SMjDW3zkxbSEuPdhgVq9p8igVpWAK7E4ueq2R5X6xraZFZVkkglkuBnb3aoKoFoxhiaSRt3zxZ7jkpFubCMz38HudX1jETy5pQpahNU3T037rop5H2PsVGORrH7KMhmAMgj0vNO3qDhy94wPOLVtD1ZHo9wAqLjcQ__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/4d83/e1af/8fb8dce5428603e901fef1e3fe672283?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SWL8xsNk0AXU~pYHDZAg5~EzgqGE~sm~zGMy-9c7FIaoD6Tq1NchmNqww7h8YMAFkntic8lAv~0Umc3Q2Al9YsWT5M9VML4cp3tG4vbUl8LliE5Pi9SUEe3HNzdmZsy2cTgonLQ0sLfqOvrlx5Web7V3aXbtfKku6wAByfG5Z4WHesA7wgywciNaNmNGC~i-EK0ZOgPtOVfedGfyvt~1GPaEIOw8FCAijDvrj1T0YZ8EBG7pogF~Ad9BU~thSA4-SW0Xs1RtVr2JfkleXHK9avt6AaF4m3BYp-6ae7b-uAl2s5MrM781TPowEJ8XAWQNbNgLGMLsEo7PR5xFcDj2hA__"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <div class="genre-selector">
+          <h3>Movies by genre</h3>
+          <div class="genres">
+            <ul>
+              <li class="genre-selector" >Comedy</li>
+              <li class="genre-selector" >Drama</li>
+              <li class="genre-selector" >Action</li>
+              <li class="genre-selector" >Romance</li>
+              <li class="genre-selector" >Fantasy</li>
+              <li class="genre-selector" >Animation</li>
+            </ul>
+          </div>
+          <div class="line"></div>
+        </div>
+        <!-- T H I R D   S L I D E R -->
+
+        <div class="swiper genre-swiper">
+          <h2>Genre</h2>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/445c/9640/5cb5192a9df1382c1b14ce6f5604684c?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kfQ0fB-xLRpnpgIAvSIodK3CIrIaqYfNNLZ9oHHzkx41cyKC8BMmJ52aBltG8kbpE~yDsoJ9vVu0D8~w5BXLNjjNhHtacP2hX~4rq1Lqd7XfIPKdDCyJN43rXcDdgSih8Fbxyp0owsKcX8NzDpHXVhY5mD4QEyxz6D5zjwtDyIsfvNYfb9gl~jOJzTWGWyOuRzx3Az92W2ACqlTTMwL~CZzQiOeqs4px~oV0XZ5nO10~pUZiPzpsjk9o~-7G1fNSNF~0BfpwWgLm878St7Y1l22ScJoyRT5qSSKvNVsKAnypluaEfa~oXpowWDR~ndyqjAUPyNMbTtOvstbjZY86Tw__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/42a1/059a/a313bf987179de0f8c65d05212c15aac?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eU1yOCB6VlBsMD820QObrlqOMfHfsz-Gq6cbCrLTziZgbhypy5bGDeby7r8McYOr3n6gYsdnwjK681ZU9Zf0ooQNOuDOlNPhGVJofvh~h56SO-VmfKLy44nuKcOl4E1WI7SUSit-QEs9rvbL21pdtq7fjGyC7pSxqS7U7mUaMn7cu1ONZ0PT90xfaIQKVBbZthVIq-9P4ZGzXPaMO-ppwwjj-FK1qr5Da7fp1XJ0Lasm8i12X~jAyQBM7p~dT34cWGHEuOgYiqpiXlpA2aplt8NLU0xDn7I7DEK41r1wHi-pFJtb7UlqMrGifFHplS2LP29KwvT4K26i0gdtGm2MPQ__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/445c/9640/5cb5192a9df1382c1b14ce6f5604684c?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kfQ0fB-xLRpnpgIAvSIodK3CIrIaqYfNNLZ9oHHzkx41cyKC8BMmJ52aBltG8kbpE~yDsoJ9vVu0D8~w5BXLNjjNhHtacP2hX~4rq1Lqd7XfIPKdDCyJN43rXcDdgSih8Fbxyp0owsKcX8NzDpHXVhY5mD4QEyxz6D5zjwtDyIsfvNYfb9gl~jOJzTWGWyOuRzx3Az92W2ACqlTTMwL~CZzQiOeqs4px~oV0XZ5nO10~pUZiPzpsjk9o~-7G1fNSNF~0BfpwWgLm878St7Y1l22ScJoyRT5qSSKvNVsKAnypluaEfa~oXpowWDR~ndyqjAUPyNMbTtOvstbjZY86Tw__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/42a1/059a/a313bf987179de0f8c65d05212c15aac?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eU1yOCB6VlBsMD820QObrlqOMfHfsz-Gq6cbCrLTziZgbhypy5bGDeby7r8McYOr3n6gYsdnwjK681ZU9Zf0ooQNOuDOlNPhGVJofvh~h56SO-VmfKLy44nuKcOl4E1WI7SUSit-QEs9rvbL21pdtq7fjGyC7pSxqS7U7mUaMn7cu1ONZ0PT90xfaIQKVBbZthVIq-9P4ZGzXPaMO-ppwwjj-FK1qr5Da7fp1XJ0Lasm8i12X~jAyQBM7p~dT34cWGHEuOgYiqpiXlpA2aplt8NLU0xDn7I7DEK41r1wHi-pFJtb7UlqMrGifFHplS2LP29KwvT4K26i0gdtGm2MPQ__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/445c/9640/5cb5192a9df1382c1b14ce6f5604684c?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kfQ0fB-xLRpnpgIAvSIodK3CIrIaqYfNNLZ9oHHzkx41cyKC8BMmJ52aBltG8kbpE~yDsoJ9vVu0D8~w5BXLNjjNhHtacP2hX~4rq1Lqd7XfIPKdDCyJN43rXcDdgSih8Fbxyp0owsKcX8NzDpHXVhY5mD4QEyxz6D5zjwtDyIsfvNYfb9gl~jOJzTWGWyOuRzx3Az92W2ACqlTTMwL~CZzQiOeqs4px~oV0XZ5nO10~pUZiPzpsjk9o~-7G1fNSNF~0BfpwWgLm878St7Y1l22ScJoyRT5qSSKvNVsKAnypluaEfa~oXpowWDR~ndyqjAUPyNMbTtOvstbjZY86Tw__"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="movie-thumbnail"
+                src="https://s3-alpha-sig.figma.com/img/42a1/059a/a313bf987179de0f8c65d05212c15aac?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eU1yOCB6VlBsMD820QObrlqOMfHfsz-Gq6cbCrLTziZgbhypy5bGDeby7r8McYOr3n6gYsdnwjK681ZU9Zf0ooQNOuDOlNPhGVJofvh~h56SO-VmfKLy44nuKcOl4E1WI7SUSit-QEs9rvbL21pdtq7fjGyC7pSxqS7U7mUaMn7cu1ONZ0PT90xfaIQKVBbZthVIq-9P4ZGzXPaMO-ppwwjj-FK1qr5Da7fp1XJ0Lasm8i12X~jAyQBM7p~dT34cWGHEuOgYiqpiXlpA2aplt8NLU0xDn7I7DEK41r1wHi-pFJtb7UlqMrGifFHplS2LP29KwvT4K26i0gdtGm2MPQ__"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="logo"><span>BE</span>MOVIES</div>
+        <div class="footbar">
+          <ul>
+            <li>search</li>
+            <li>latest</li>
+            <li>genres</li>
+            <li>register</li>
+            <li>sign up</li>
+          </ul>
+        </div>
+        <div class="copyright">@2023 - All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="app.js" defer></script>
+    <script src="API-search-section.js" defer></script>
+    <script src="API-latest-section.js" defer></script>
+    <script src="API-genre-section.js" defer></script>
+  </body>
+</html>

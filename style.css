@@ -1,0 +1,479 @@
+.logo {
+  font-family: "Inria Sans";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.16px;
+}
+.logo span {
+  color: #cc0000;
+}
+
+.navbar ul li {
+  font-family: "Inria Sans";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.79px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+#search-field {
+  text-align: center;
+  max-width: 17rem;
+  text-align: left;
+  padding: 0.625rem;
+}
+
+.login-modal {
+  font-family: "Inria Sans";
+}
+.login-modal .login-options {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.78px;
+  letter-spacing: 0.03em;
+}
+.login-modal .button {
+  font-family: "Inria Sans";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23.98px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.card-text .card-title {
+  font-family: "Inria Sans";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.98px;
+  letter-spacing: 0.03em;
+  color: #cc0000;
+  text-transform: uppercase;
+}
+.card-text h2 {
+  font-family: "Inria Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.79px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.card-text .star-rating {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.2px;
+  color: #cc0000;
+}
+.card-text p {
+  font-family: "Inria Sans";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+main h2 {
+  color: #ffffff;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+}
+
+.movie-info .movie-title {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.2px;
+  text-align: center;
+}
+.movie-info .movie-year {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.2px;
+  text-align: center;
+  color: rgb(176, 176, 176);
+}
+.movie-info .movie-genre {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  text-align: center;
+}
+.movie-info .movie-rating {
+  font-family: "Inter";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.73px;
+  text-align: center;
+  color: #cc0000;
+}
+
+.genre-selector h3 {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+.genre-selector .genres ul {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19.36px;
+  color: #ffffff;
+}
+.genre-selector .line {
+  height: 1px;
+  background-color: #ffffff;
+}
+
+footer {
+  font-family: "Inria Sans";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.79px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+footer .copyright {
+  text-transform: none;
+  color: rgb(184, 184, 184);
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.79px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .container {
+  background-color: #141517;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px auto;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+}
+.navbar ul li:hover {
+  cursor: pointer;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin: 50px auto;
+}
+
+#search-field {
+  border-radius: 8px 0px 0px 8px;
+  border: none;
+}
+
+.arrow {
+  background-color: rgb(204, 0, 0);
+  border-radius: 0px 8px 8px 0px;
+  height: 2.2rem;
+  transform: scale(1);
+  transition: 0.3s ease;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+
+main .container {
+  background-color: #191b20;
+}
+main .container h2 {
+  padding-bottom: 10px;
+  text-wrap: nowrap;
+}
+
+.swiper {
+  margin-bottom: 4rem;
+}
+
+.swiper-slide .movie-thumbnail {
+  position: relative;
+  transition: 0.3s ease;
+}
+.swiper-slide:hover .movie-thumbnail {
+  filter: brightness(0.2);
+}
+.swiper-slide:hover .movie-info {
+  opacity: 100%;
+}
+.swiper-slide .movie-info {
+  opacity: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s ease;
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.swiper-slide .movie-info .movie-title {
+  padding-bottom: 20px;
+}
+.swiper-slide .movie-info .movie-year {
+  padding-bottom: 20px;
+}
+.swiper-slide .movie-info .movie-genre {
+  padding-bottom: 20px;
+}
+.swiper-slide .movie-info .movie-star {
+  max-width: 35px;
+  align-self: center;
+}
+
+.genre-selector {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+.genre-selector .genres ul {
+  display: flex;
+  justify-content: space-between;
+}
+.genre-selector .genres ul li {
+  padding: 8px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+.genre-selector .genres ul li:hover {
+  cursor: pointer;
+  background-color: #cc0000;
+}
+.genre-selector .line {
+  margin: 20px 0;
+}
+
+footer .container {
+  background-color: #141517;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+footer .container .footbar ul {
+  display: flex;
+  gap: 2rem;
+}
+footer .container .footbar ul li:hover {
+  cursor: pointer;
+}
+
+.swiper {
+  width: 60vw;
+  height: auto;
+  min-height: 350px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.swiper-button-next {
+  background-image: url(next-arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  background-image: url(prev-arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-slide .movie-thumbnail {
+  width: 100%;
+}
+
+.search-swiper {
+  display: none;
+}
+
+.login-modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  height: auto;
+  width: 400px;
+  overflow: auto;
+}
+
+.login-modal-content {
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-modal-content .close {
+  align-self: flex-start;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  width: 16px;
+}
+.login-modal-content .close:hover {
+  cursor: pointer;
+}
+.login-modal-content .login-options {
+  display: flex;
+}
+.login-modal-content .login-options .signupOpt {
+  background-color: #141517;
+  padding: 10px 25px;
+  border: 1px solid #ffffff;
+  border-right: none;
+  border-radius: 8px 0px 0px 8px;
+}
+.login-modal-content .login-options .signupOpt:hover {
+  cursor: pointer;
+}
+.login-modal-content .login-options .loginOpt {
+  background-color: #cc0000;
+  padding: 10px 30px;
+  border: none;
+  border-left: none;
+  border-radius: 0px 8px 8px 0px;
+}
+.login-modal-content .login-options .loginOpt:hover {
+  cursor: pointer;
+}
+.login-modal-content > * {
+  margin-top: 40px;
+}
+.login-modal-content .username, .login-modal-content .password {
+  padding: 10px;
+  width: 60%;
+  border-radius: 8px;
+}
+.login-modal-content .button {
+  background-color: #cc0000;
+  padding: 10px;
+  width: 60%;
+  border-radius: 8px;
+  border: none;
+}
+.login-modal-content a {
+  text-decoration: none;
+  color: #cc0000;
+}
+.login-modal-content a:hover {
+  cursor: pointer;
+}
+.login-modal-content p {
+  margin-bottom: 40px;
+}
+
+.movie-modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  height: auto;
+  width: 800px;
+  overflow: auto;
+  margin-top: 60px;
+}
+
+.movie-modal-content {
+  color: #ffffff;
+  background-color: #000;
+}
+.movie-modal-content .card {
+  display: flex;
+}
+.movie-modal-content .close-movie {
+  align-self: flex-start;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  width: 16px;
+}
+.movie-modal-content .close-movie:hover {
+  cursor: pointer;
+}
+.movie-modal-content .card-image img {
+  max-width: 200px;
+  margin: 60px;
+  border: 1px solid white;
+}
+.movie-modal-content .card-text {
+  margin-top: 60px;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.movie-modal-content .star-rating img {
+  height: 21px;
+  width: 21px;
+}
+.movie-modal-content .card-genre {
+  margin-top: 20px;
+}
+.movie-modal-content .card-description {
+  margin-bottom: 30px;
+}
+.movie-modal-content .cast-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 30px;
+}
+.movie-modal-content .card-cast {
+  padding: 0;
+  align-self: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background-color: #191b20;
+}/*# sourceMappingURL=style.css.map */
